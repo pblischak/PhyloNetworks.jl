@@ -6,12 +6,9 @@ module PhyloNetworks
     using DataFrames # for functions to read/write tables, and names()
     using GLM # for the lm function
     using NLopt # for branch lengths optimization
-    using Gadfly # for plots
     using ColorTypes # used by Gadfly already. To resolve data type names (Colorant)
     using StatsBase: sample
     using Combinatorics.combinations
-    using RCall
-    using RCall: protect, unprotect, RClass
     using NullableArrays
     using StaticArrays
     using IterTools
@@ -19,10 +16,8 @@ module PhyloNetworks
     using BioSymbols
 
     import Base.show
-    import Gadfly.plot
     import GLM.ftest
-    import RCall.sexp
-    export plot, ftest, sexp
+    export ftest
 
     global DEBUG = false #for debugging only
     const DEBUGC = false #more detailed prints
@@ -128,7 +123,6 @@ module PhyloNetworks
         randomTrait,
         randomTrait!,
         #
-        apeRExport
 
     # export part
 
@@ -147,13 +141,10 @@ module PhyloNetworks
     include("manipulateNet.jl")
     include("bootstrap.jl")
     include("multipleAlleles.jl")
-    include("plotsGadfly.jl")
-    include("plotsRCall.jl")
     include("compareNetworks.jl")
     include("traits.jl")
     include("parsimony.jl")
     include("pairwiseDistanceLS.jl")
-    include("apeRExport.jl")
     include("substitutionModels.jl")
     include("biconnectedComponents.jl")
 

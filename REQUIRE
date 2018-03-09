@@ -5,10 +5,8 @@ DataFrames 0.9
 DataStructures 0.5.2
 NLopt 0.3
 ColorTypes 0.2
-Gadfly 0.4
 GLM 0.8.1
 Combinatorics 0.2.1
-RCall 0.6.1
 StatsFuns 0.4.0 #already required by GLM
 IterTools 0.2.1 # possibly 0.1.0
 BioSequences 0.8.1
