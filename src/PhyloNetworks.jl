@@ -108,9 +108,7 @@ module PhyloNetworks
         mu_estim,
         lambda_estim,
         expectations,
-        expectationsPlot,
         predint,
-        predintPlot,
         ## Discrete Trait PCM
         parsimonySoftwired,
         parsimonyGF,

@@ -8,9 +8,9 @@
 [![Coverage Status](https://coveralls.io/repos/crsl4/PhyloNetworks/badge.svg?branch=master&service=github)](https://coveralls.io/github/crsl4/PhyloNetworks?branch=master)
 -->
 
-  **This is a fork of the original PhyloNetworks.jl package. It is a hacky
-  version that is trying to remove the plotting dependencies Rcall and Gadfly
-  so that I can use the package on a cluster.**
+  > **This is a fork of the original PhyloNetworks.jl package. It is a hacky
+  > version that is trying to remove the plotting dependencies Rcall and Gadfly
+  > so that I can use the package on a cluster.**
 
 ## Overview
 
