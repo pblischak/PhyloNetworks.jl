@@ -12,6 +12,19 @@
   > version that is trying to remove the plotting dependencies Rcall and Gadfly
   > so that I can use the package on a cluster.**
 
+The solution to the install issue was to individually `include()` each of
+the local modules and the necessary Julia Packages (`DataFrames` and
+`Combinatorics.combinations`). I then made another Julia script in the
+`src/` folder called `hack.jl` that has all of the functionality I
+want/need. All I'm doing is comparing estimates of quartet concordance
+factors, so the only function I really need is `readTree2CF()`. The
+`hack.jl` has all of the necessary imports and includes to do this without
+actually installing or loading the rest of the PhyloNetworks package.
+
+I've also realized that the `functions.jl` script does not rely on the plotting
+functions and can be included to use all the other methods. It appears Issue #16
+is also associated with the problems I've been having.
+
 ## Overview
 
 PhyloNetworks is a [Julia](http://julialang.org) package with utilities to:
